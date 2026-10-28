@@ -1,0 +1,253 @@
+.conteudo {
+  width: min(1080px, 100%);
+  margin-inline: auto;
+  padding: clamp(1.5rem, 4vw, 3rem) 1.25rem 2rem;
+}
+
+.titulo-pagina {
+  margin-bottom: 1.8rem;
+}
+
+.titulo-pagina h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--palha);
+  letter-spacing: 0.5px;
+}
+
+.titulo-pagina p {
+  margin: 0.4rem 0 0;
+  font-size: 1.1rem;
+}
+
+.aviso-voto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem 1.2rem;
+  background: var(--pasto);
+  border-left: 8px solid var(--palha);
+  border-radius: 6px;
+}
+
+.aviso-link {
+  padding: 0.4rem 0.9rem;
+  background: var(--palha);
+  color: var(--tinta);
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.grade-roca {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.grade-peoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1rem;
+}
+
+.bloco-peoes {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 3px dashed var(--madeira-clara);
+}
+
+.bloco-peoes h2 {
+  font-size: 1.6rem;
+  color: var(--palha);
+}
+
+.bloco-peoes > p {
+  margin: 0.3rem 0 1.2rem;
+  opacity: 0.85;
+}
+
+.card {
+  position: relative;
+  display: grid;
+  gap: 0.8rem;
+  padding: 0.6rem;
+  background: var(--papel);
+  color: var(--tinta);
+  border: 2px solid var(--madeira-clara);
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+.card-figura {
+  margin: 0;
+}
+
+.card-foto {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 3px;
+  filter: sepia(0.15);
+}
+
+.card-nome {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.card-roca {
+  padding: 1rem;
+  border: 4px solid var(--celeiro);
+  outline: 2px dashed var(--celeiro);
+  outline-offset: -12px;
+}
+
+.card-roca .card-foto {
+  filter: none;
+}
+
+.card-roca .card-nome {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.selo-roca {
+  position: absolute;
+  top: -0.8rem;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%) rotate(-3deg);
+  padding: 0.25rem 1rem;
+  background: var(--celeiro);
+  color: var(--palha);
+  font-family: var(--fonte-titulo);
+  font-size: 1.1rem;
+  border: 2px solid var(--papel);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.card-botao {
+  width: 100%;
+}
+
+.contador {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.contador-numero {
+  font-family: var(--fonte-titulo);
+  font-size: 2.8rem;
+  color: var(--palha);
+}
+
+.placar {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.placar-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.8rem;
+  background: var(--papel);
+  color: var(--tinta);
+  border-radius: 8px;
+  border: 3px solid var(--madeira-clara);
+}
+
+.placar-lider {
+  border: 4px solid var(--celeiro);
+  box-shadow: 0 0 0 4px rgba(181, 51, 42, 0.35);
+}
+
+.placar-foto {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.placar-topo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.placar-topo h3 {
+  font-size: 1.4rem;
+}
+
+.selo-lider {
+  padding: 0.2rem 0.6rem;
+  background: var(--celeiro);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.barra {
+  height: 20px;
+  margin: 0.6rem 0;
+  background: #d9c6a0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.barra-preenchida {
+  height: 100%;
+  background: var(--madeira);
+  transition: width 0.5s ease-out;
+}
+
+.placar-lider .barra-preenchida {
+  background: var(--celeiro);
+}
+
+.placar-legenda {
+  margin: 0;
+  font-weight: 800;
+}
+
+.sem-votos {
+  display: grid;
+  justify-items: center;
+  gap: 1.2rem;
+  padding: 2rem;
+  background: var(--papel);
+  color: var(--tinta);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.sem-votos p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.botao-zerar {
+  background: var(--madeira-escura);
+  color: var(--papel);
+  box-shadow: 0 4px 0 #1e1108;
+}
+
+@media (max-width: 560px) {
+  .placar-item {
+    grid-template-columns: 1fr;
+  }
+}
